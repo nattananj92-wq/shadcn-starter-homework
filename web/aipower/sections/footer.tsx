@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2">
               {col.links.map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href="#" className="text-sm text-[#F5F5F5] hover:text-white transition-colors">
                     {link}
                   </a>
                 </li>
