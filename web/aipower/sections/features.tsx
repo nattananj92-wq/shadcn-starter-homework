@@ -35,15 +35,16 @@ function ComponentCard({ bg, preview, title, count }: ComponentCardProps) {
 }
 
 const cards = [
-  { bg: imgCardDark1, preview: imgAlertDialog, title: "Alert Dialog",  count: "39 blocks" },
-  { bg: imgCardDark2, preview: imgAvatarGroup, title: "Avatar Group",  count: "9 blocks"  },
-  { bg: imgCardDark2, preview: imgDatePicker,  title: "Date Picker",   count: "8 blocks"  },
-  { bg: imgCardDark1, preview: imgDialog,      title: "Dialog",        count: "17 blocks" },
+  { bg: imgCardDark1, preview: imgAlertDialog, title: "Alert Dialog",       count: "39 blocks" },
+  { bg: imgCardDark2, preview: imgDatePicker,  title: "Date Picker",        count: "8 blocks"  },
+  { bg: imgCardDark1, preview: imgDialog,      title: "Navigation Bar",     count: "15 blocks" },
+  { bg: imgCardDark1, preview: imgAvatarGroup, title: "Progress Indicator", count: "12 blocks" },
 ];
 
 export default function Features() {
   return (
-    <section className="flex flex-col items-start px-4 sm:px-8 lg:px-[120px] py-12 lg:py-20 w-full">
+    <section className="w-full py-12 lg:py-20">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-16 flex flex-col items-start">
       <div className="flex flex-col gap-3 lg:gap-4 pb-10 lg:pb-20 w-full">
         <h2 className="text-3xl lg:text-4xl font-bold text-black leading-tight lg:leading-[40px]">
           Explore the components
@@ -54,19 +55,20 @@ export default function Features() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-6 w-full lg:hidden">
+      <div className="flex flex-col gap-4 w-full lg:hidden">
         {cards.map((c) => <ComponentCard key={c.title} {...c} />)}
       </div>
 
-      <div className="hidden lg:flex justify-between gap-8 w-full px-6">
-        <div className="flex flex-col gap-8 w-[459px]" style={{ paddingTop: 36 }}>
+      <div className="hidden lg:flex gap-4 w-full">
+        <div className="flex flex-col gap-4 flex-1" style={{ paddingTop: 36 }}>
           <ComponentCard {...cards[0]} />
           <ComponentCard {...cards[1]} />
         </div>
-        <div className="flex flex-col gap-8 w-[459px]">
+        <div className="flex flex-col gap-4 flex-1">
           <ComponentCard {...cards[2]} />
           <ComponentCard {...cards[3]} />
         </div>
+      </div>
       </div>
     </section>
   );

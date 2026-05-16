@@ -10,7 +10,8 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16 px-4 sm:px-8 lg:px-16 py-10 lg:py-14 w-full bg-[#1e293b]">
+    <footer className="w-full bg-[#1e293b]">
+      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16 px-4 sm:px-8 lg:px-16 py-10 lg:py-14">
       <div className="flex flex-col gap-3 shrink-0">
         <div className="relative size-8">
           <Image src={imgLogo} alt="Logo" fill className="object-contain brightness-0 invert" unoptimized />
@@ -34,6 +35,7 @@ export default function Footer() {
             </ul>
           </div>
         ))}
+      </div>
       </div>
     </footer>
   );

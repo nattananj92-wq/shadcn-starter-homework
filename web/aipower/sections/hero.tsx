@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { imgBackground } from "@/web/aipower/assets";
-import DashboardPreview from "./dashboard-preview";
 
 export default function Hero() {
   return (
@@ -14,7 +13,7 @@ export default function Hero() {
         priority
       />
 
-      <div className="relative z-10 flex flex-col gap-6 lg:gap-10 items-center w-full px-4 sm:px-8">
+      <div className="relative z-10 flex flex-col gap-6 lg:gap-10 items-center w-full max-w-[1280px] mx-auto px-4 sm:px-8">
         <h1 className="text-3xl sm:text-5xl lg:text-[60px] font-bold text-white text-center leading-tight lg:leading-[60px]">
           AI-Power Design knit
         </h1>
@@ -28,7 +27,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <DashboardPreview />
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-16 flex justify-center">
+        <Image
+          src="/hero-preview.png"
+          alt="Dashboard preview"
+          width={1029}
+          height={405}
+          className="w-full h-auto rounded-xl shadow-2xl"
+          priority
+        />
+      </div>
     </section>
   );
 }
