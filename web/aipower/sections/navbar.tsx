@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { imgLogo } from "./assets";
+import { imgLogo } from "@/web/aipower/assets";
 
 const navLinks = ["Document", "Products", "Pricing"];
 
-export default function Header() {
+export default function Navbar() {
   return (
     <header className="flex items-center justify-between px-4 sm:px-8 lg:px-16 py-4 w-full bg-[#fafafa] shrink-0">
       <div className="relative size-10 shrink-0">
@@ -19,7 +19,6 @@ export default function Header() {
             {label}
           </a>
         ))}
-        {/* mobile: show compact nav */}
         <button className="sm:hidden flex items-center justify-center size-10 rounded-lg text-[#020617] hover:bg-black/5 transition-colors">
           <svg className="size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" d="M3 6h14M3 10h14M3 14h14" />
